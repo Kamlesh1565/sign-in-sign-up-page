@@ -4,7 +4,7 @@ const submitBtn = document.querySelector('#submit')
 
 const idInput = document.querySelector('#id')
 const passwordInput = document.querySelector('#password')
-
+const a =1;
 
 
 if(localStorage.getItem('id') === null){
