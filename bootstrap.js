@@ -30,7 +30,8 @@ function onSignUp(e) {
         return;
     }else{
         
-        h3.innerText = ''
+        h3.innerText = 'Signed up Successfully'
+        h3.style.color = 'green';
 
         UserId.push(id)
         UserPassword.push(password)
@@ -90,6 +91,7 @@ function onSignIn(e){
 function toggleSignIn(e){
     cover.classList.remove('to-right')
     cover.querySelector('h2').children[0].innerText = 'Welcome Back!!'
+    cover.querySelector('h2').children[0].style.fontSize = '2.5em'
     cover.querySelector('h2').children[1].innerText = 'Sign In to continue'
 
     cover.querySelector('h3').children[0].innerText = 'Not a user? Click to register'
