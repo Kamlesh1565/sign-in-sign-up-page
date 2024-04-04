@@ -4,7 +4,7 @@ const submitBtn = document.querySelector('#submit')
 
 const idInput = document.querySelector('#id')
 const passwordInput = document.querySelector('#password')
-const a =1;
+
 
 
 if(localStorage.getItem('id') === null){
@@ -24,8 +24,9 @@ function onSignUp(e) {
     let id = idInput.value
     let password = passwordInput.value
     
-    if(UserId.includes(id) && UserPassword.includes(password)){
-        h3.innerText = 'User Already Exists'
+    if(UserId.includes(id)){
+        h3.innerText = 'User Already Exists!!';
+        h3.style.color = 'red';
         return;
     }else{
         
@@ -59,6 +60,7 @@ const signInIdInput = document.querySelector('#sign-in-id')
 const signInPasswordInput = document.querySelector('#sign-in-password')
 
 const h3 = document.querySelector('#h3')
+const H3 = document.querySelector('#H3')
 const toggleSignInBtn = document.querySelector('#toggle-sign-in')
 const toggleSignUpBtn = document.querySelector('#toggle-sign-up')
 const cover = document.querySelector('.cover')
@@ -72,9 +74,11 @@ function onSignIn(e){
     let password = signInPasswordInput.value
     
     if(UserId.includes(id) && UserPassword.includes(password)){
-        h3.innerText = 'Sign In Successful'
+        H3.innerText = 'Sign In Successful'
+        H3.style.backgroundColor= 'green'
+
     }else{
-        h3.innerText=''
+        H3.innerText=''
         alert("Incorrect Credentials")
     }
 
